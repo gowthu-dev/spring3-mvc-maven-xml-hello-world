@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('scm') {
       steps {
-        echo 'Jenkins minute pipeline'
+        git(url: 'https://github.com/gowthu-dev/spring3-mvc-maven-xml-hello-world.git', branch: 'master')
       }
     }
 
